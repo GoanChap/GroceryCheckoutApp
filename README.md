@@ -7,6 +7,7 @@ Its an app that simulates the functionality of the self service check out counte
 
 **Future scope**:
 ~~Add discounts to final amount~~
+
 Error handling for unidentified SKU
 
 The problem starts simply:
