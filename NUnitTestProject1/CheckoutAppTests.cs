@@ -47,5 +47,24 @@ namespace GroceryCheckoutApp.nUnitTests
             Assert.AreEqual(165, total);
         }
 
+        [Test]
+        public void Calculate_Total_Test_After_Discout()
+        {
+
+            //Assign
+            _checkoutApp.Scan('A');
+            _checkoutApp.Scan('B');
+            _checkoutApp.Scan('C');
+            _checkoutApp.Scan('D');
+            _checkoutApp.Scan('X');
+
+            //Act
+            var total = _checkoutApp.Total();
+
+
+            //Assert
+            Assert.AreEqual(57, total);
+        }
+
     }
 }
