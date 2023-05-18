@@ -22,3 +22,5 @@ B | 30
 C | 20
 
 D | 15
+
+Ver 1.1: Added Discount coupons functionality
