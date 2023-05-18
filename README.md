@@ -3,10 +3,10 @@ Automatic Checkout App
 
 Its an app that simulates the functionality of the self service check out counter
 
-Version 1: Has scan product and Total methods
+**Version 1**: Has scan product and Total methods
 
-Future scope:
-Add discounts to final amount
+**Future scope**:
+~~Add discounts to final amount~~
 Error handling for unidentified SKU
 
 The problem starts simply:
@@ -23,4 +23,4 @@ C | 20
 
 D | 15
 
-Ver 1.1: Added Discount coupons functionality
+**Ver 1.1**: Added Discount coupons functionality
