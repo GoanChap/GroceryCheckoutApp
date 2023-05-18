@@ -16,7 +16,12 @@ namespace GroceryCheckoutApp
             { 'B',30 },
             { 'C',20 },
             { 'D',15 }
-
+        };
+        Dictionary<char, decimal> discountList = new Dictionary<char, decimal>
+        {
+            { 'X',0.5m },
+            { 'Y',0.1m },
+            { 'Z',0.05m }            
         };
 
         public void Scan (char a)
@@ -29,14 +34,26 @@ namespace GroceryCheckoutApp
 
         public int Total()
         {
-            int total = 0;
-            foreach (var v in shoppingList)
+            decimal total = 0m;
+            total = inventoryList.Sum(x =>
             {
-                if (inventoryList.ContainsKey(v.Key))
-                    total += (v.Value * inventoryList[v.Key]);
-            }
-            return total;
+                if (shoppingList.ContainsKey(x.Key) == inventoryList.ContainsKey(x.Key))
+                    return shoppingList[x.Key] * inventoryList[x.Key];
+                else
+                    return 0;
+            });
+            //above code in another format. Not sure whose BigO Time complexity would be higher
+            //foreach (var v in shoppingList)
+            //{
+            //    if (inventoryList.ContainsKey(v.Key))
+            //        total += (v.Value * inventoryList[v.Key]);
+            //}
+            foreach (var v in discountList)
+            {
+                if (shoppingList.ContainsKey(v.Key))
+                    total = Decimal.Multiply(total, (discountList[v.Key]));
+            }            
+            return Decimal.ToInt32(total);
         }
-
     }
 }

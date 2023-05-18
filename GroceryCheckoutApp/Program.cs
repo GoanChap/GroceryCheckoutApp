@@ -11,6 +11,7 @@ namespace GroceryCheckoutApp
             app.Scan('A');
             app.Scan('B');
             app.Scan('A');
+            app.Scan('X');
             Console.WriteLine("Your total is: " + app.Total());
         }
     }
