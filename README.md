@@ -7,9 +7,10 @@ Its an app that simulates the functionality of the self service check out counte
 **Version 1**: Has scan product and Total methods
 
 **Future scope**:
-~~Add discounts to final amount~~
 
-Error handling for unidentified SKU
+~~1. Add discounts to final amount~~
+
+2. Error handling for unidentified SKU
 
 
 The problem starts simply:
